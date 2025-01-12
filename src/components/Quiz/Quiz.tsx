@@ -11,7 +11,7 @@ const Quiz = () => {
 
   const listRef = useRef<HTMLUListElement>(null);
 
-  const checkAnswer = (e: React.MouseEvent<HTMLDivElement>, index: number) => {
+  const checkAnswer = (e: React.MouseEvent<HTMLElement>, index: number) => {
     // console.log(index);
     if (lock === false) {
       const target = e.target as HTMLElement; // Type assertion
@@ -83,7 +83,7 @@ const Quiz = () => {
             <li
               className={`text-sm p-3 border border-slate-300 rounded-md cursor-pointer`}
               key={index}
-              onClick={(e) => {
+              onClick={(e: React.MouseEvent<HTMLElement>) => {
                 checkAnswer(e, index);
               }}
             >
