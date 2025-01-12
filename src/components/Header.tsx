@@ -13,6 +13,12 @@ const Header = () => {
         <p className="text-white text-sm py-4">
           Part of <span className="underline underline-offset-4 decoration-2">Computer Science</span>
         </p>
+        <p className="text-slate-300  text-xs ">
+          Developed by{" "}
+          <a href="https://github.com/kitindi/react_typescript_quiz_app" target="_blank" className="underline underline-offset-4 decoration-2">
+            @Abdulaziz Sadi
+          </a>
+        </p>
       </div>
     </div>
   );
