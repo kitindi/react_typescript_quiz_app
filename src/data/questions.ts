@@ -40,4 +40,29 @@ export const questions = [
     ],
     answer: 1,
   },
+  {
+    question: "What is virtual memory?",
+    options: ["High-speed internal memory", "Secondary storage used as additional RAM", "High-speed external memory"],
+    answer: 1,
+  },
+  {
+    question: "What is cache memory used for?",
+    options: ["Temporarily holding frequently used data and instructions", "Extending the available RAM", "Extending the available ROM"],
+    answer: 0,
+  },
+  {
+    question: "What is the purpose of secondary storage?",
+    options: ["To hold data and programs that are currently in use", "To store data and programs long-term", "To extend RAM"],
+    answer: 1,
+  },
+  {
+    question: "Which type of computers usually have no need for secondary storage?",
+    options: ["General purpose computers", "Tablet computers", "Embedded computers"],
+    answer: 2,
+  },
+  {
+    question: "What type of storage is a hard disk drive?",
+    options: ["Optical", "Magnetic", "Flash"],
+    answer: 1,
+  },
 ];
