@@ -9,18 +9,20 @@ const Quiz = () => {
 
   const [lock, setLock] = useState(false);
 
-  const listRef = useRef(null);
+  const listRef = useRef<HTMLUListElement>(null);
 
-  const checkAnswer = (e: React.MouseEvent, index: number) => {
+  const checkAnswer = (e: React.MouseEvent<HTMLDivElement>, index: number) => {
     // console.log(index);
     if (lock === false) {
+      const target = e.target as HTMLElement; // Type assertion
+
       if (question.answer === index) {
-        e.target.classList.add("bg-green-400");
+        target.classList.add("bg-green-400");
         setCorrectAnswerCount((count) => count + 1);
 
         setLock(true);
       } else {
-        e.target.classList.add("bg-red-400");
+        target.classList.add("bg-red-400");
 
         setLock(true);
       }
@@ -34,7 +36,9 @@ const Quiz = () => {
         if (listRef.current) {
           const listItems = listRef.current.querySelectorAll("li");
           listItems.forEach((item) => {
-            item.classList.remove("bg-green-400", "bg-red-400");
+            // Assert that item is an HTMLElement
+            const element = item as HTMLElement;
+            element.classList.remove("bg-green-400", "bg-red-400");
           });
         }
 
