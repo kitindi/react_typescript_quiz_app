@@ -4,14 +4,14 @@ import { questions } from "../../data/questions";
 const Quiz = () => {
   const [index, setIndex] = useState(0);
   const [question, setQuestion] = useState(questions[index]);
-  const [correctAnswerCount, setCorrectAnswerCount] = useState(0);
+  const [correctAnswerCount, setCorrectAnswerCount] = useState<number>(0);
   const [show, setShow] = useState(false);
 
   const [lock, setLock] = useState(false);
 
   const listRef = useRef(null);
 
-  const checkAnswer = (e, index) => {
+  const checkAnswer = (e: React.MouseEvent, index: number) => {
     // console.log(index);
     if (lock === false) {
       if (question.answer === index) {

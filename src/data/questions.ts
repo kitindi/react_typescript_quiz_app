@@ -1,4 +1,6 @@
-export const questions = [
+import { questionType } from "../types/types";
+
+export const questions: questionType[] = [
   {
     question: "What is primary memory?",
     options: [
